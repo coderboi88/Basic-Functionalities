@@ -5,11 +5,11 @@ import android.content.SharedPreferences;
 
 
 //Class to save the state of theme :- dark/Night
-public class saveState {
+public class SaveState {
     Context context;
     SharedPreferences sharedPreferences;
 
-    public saveState(Context context ){
+    public SaveState(Context context ){
         this.context = context;
     }
 
