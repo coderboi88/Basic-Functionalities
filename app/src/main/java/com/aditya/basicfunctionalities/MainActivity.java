@@ -3,7 +3,6 @@ package com.aditya.basicfunctionalities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import android.annotation.TargetApi;
 import android.app.PictureInPictureParams;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -20,7 +19,6 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
-
 import com.roger.catloadinglibrary.CatLoadingView;
 
 public class MainActivity extends AppCompatActivity {
@@ -66,14 +64,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    //saveState.setState(true);
-                    //getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     reset();
                 }
                 else{
-                    //saveState.setState(false);
-                    //getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     reset();
                 }

@@ -79,6 +79,8 @@ public class PasswordSaverActivity extends AppCompatActivity {
         Zoomy.Builder builder = new Zoomy.Builder(this).target(uploadImage);
         builder.register();
 
+
+        //This is used to store password.
         sharedPreferences = this.getPreferences(MODE_PRIVATE);
         if(sharedPreferences.getString(sharpref_key,null)==null){
             saveBtn.setOnClickListener(new View.OnClickListener() {
@@ -176,5 +178,10 @@ public class PasswordSaverActivity extends AppCompatActivity {
                 uploadImage.setImageBitmap(BitmapFactory.decodeFile(picturePath));
             }
         }
+    }
+
+    public void goNextActivity(View view) {
+        Intent intent = new Intent(PasswordSaverActivity.this,BottomSheetActivity.class);
+        startActivity(intent);
     }
 }
